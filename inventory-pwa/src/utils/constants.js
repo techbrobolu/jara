@@ -1,0 +1,4 @@
+export const API_URL = 'https://iprdluzxcjhmdjqvsonl.supabase.co';
+export const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlwcmRsdXp4Y2pobWRqcXZzb25sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NTQ0MTUsImV4cCI6MjA3NTQzMDQxNX0.hhrh5sXnhYszKdB9k_FV_b6mL3YU4Bi1GtWqFzU7p44';
+export const DEFAULT_PAGE_SIZE = 10;
+export const LOW_STOCK_THRESHOLD = 10;
