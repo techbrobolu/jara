@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { supabase } from '../services/supabase';
+import supabase from '../services/supabase';
 
 const AuthContext = createContext();
 
@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
         });
 
         return () => {
-            authListener.subscription.unsubscribe();
+            if (authListener?.subscription) authListener.subscription.unsubscribe();
         };
     }, []);
 
@@ -27,13 +27,20 @@ export const AuthProvider = ({ children }) => {
         setUser(user);
     };
 
+    const register = async (email, password) => {
+        const { data, error } = await supabase.auth.signUp({ email, password });
+        if (error) throw error;
+        setUser(data?.user ?? null);
+        return data;
+    };
+
     const logout = async () => {
         await supabase.auth.signOut();
         setUser(null);
     };
 
     return (
-        <AuthContext.Provider value={{ user, loading, login, logout }}>
+        <AuthContext.Provider value={{ user, loading, login, register, logout }}>
             {children}
         </AuthContext.Provider>
     );

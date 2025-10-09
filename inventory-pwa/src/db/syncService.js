@@ -1,5 +1,3 @@
-// Sure, here's the contents for the file /inventory-pwa/inventory-pwa/src/db/syncService.js:
-
 import { supabase } from '../services/supabase';
 import db from './dexieDB';
 

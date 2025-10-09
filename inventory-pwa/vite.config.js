@@ -1,18 +1,18 @@
-Sure, here's the contents for the file /inventory-pwa/inventory-pwa/vite.config.js:
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+import { VitePWA } from 'vite-plugin-pwa'
 
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { VitePWA } from 'vite-plugin-pwa';
-
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Store Inventory Management',
-        short_name: 'InventoryApp',
+        name: 'Jara',
+        short_name: 'Jara',
         description: 'A PWA for managing store inventory with offline capabilities.',
         theme_color: '#4A90E2',
         background_color: '#ffffff',
@@ -21,20 +21,20 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: 'icons/icon-192x192.png',
+            src: '/public/icons/icon-192x192.png',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/png'
           },
           {
-            src: 'icons/icon-512x512.png',
+            src: '/public/icons/icon-512x512.png',
             sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-      },
-    }),
+            type: 'image/png'
+          }
+        ]
+      }
+    })
   ],
   server: {
-    port: 3000,
-  },
-});
+    port: 3000
+  }
+})

@@ -1,5 +1,3 @@
-// Sure, here's the contents for the file /inventory-pwa/inventory-pwa/src/services/supabase.js:
-
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
