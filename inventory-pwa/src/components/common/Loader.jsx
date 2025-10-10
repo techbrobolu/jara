@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Loader = () => {
+export default function Loader() {
   return (
-    <div className="flex justify-center items-center min-h-[200px]">
-      <div className="spinner" />
+    <div className="flex items-center justify-center p-6 min-h-[100px]">
+      <div className="spinner" role="status" aria-label="Loading"></div>
     </div>
   );
-};
-
-export default Loader;
+}
