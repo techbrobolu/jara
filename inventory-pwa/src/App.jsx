@@ -2,13 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { InventoryProvider } from './context/InventoryContext';
-import MainLayout from './components/layouts/MainLayout';
-import Dashboard from './components/Dashboard';
-import Login from './components/auth/Login';
-import Register from './components/auth/Register'
-import Products from './components/products/Products';
-import ProductAdd from './components/products/ProductAdd';
-import ProductEdit from './components/products/ProductEdit';
+import MainLayout from './layouts/MainLayout';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import Register from './pages/Register'
+import Products from './pages/Products';
+import ProductAdd from './pages/ProductAdd';
+import ProductEdit from './pages/ProductEdit';
 
 function App() {
   return (
