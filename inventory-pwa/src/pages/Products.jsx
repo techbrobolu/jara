@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useInventory } from '../hooks/useInventory';
+import useInventory from '../hooks/useInventory';
 import ProductGrid from '../components/products/ProductGrid';
 import ProductCarousel from '../components/products/ProductCarousel';
 import SearchBar from '../components/products/SearchBar';
