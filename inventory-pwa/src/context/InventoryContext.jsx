@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { db } from '../db/dexieDB';
+import db from '../db/dexieDB';
 import { syncData } from '../db/syncService';
 
 const InventoryContext = createContext();

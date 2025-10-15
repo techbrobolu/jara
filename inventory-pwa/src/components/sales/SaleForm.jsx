@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { InventoryContext } from '../../context/InventoryContext';
-import { toast } from 'react-hot-toast';
+import { toast } from 'sonner';
 
 const SaleForm = ({ product }) => {
     const { recordSale } = useContext(InventoryContext);
