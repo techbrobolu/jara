@@ -1,8 +1,11 @@
 import React from 'react';
+import { Chart as CharJS, Tooltip, Legend } from "chart.js"
 import { Bar } from 'react-chartjs-2';
 import { useInventory } from '../../hooks/useInventory';
 
 const SummaryCharts = () => {
+    ChartJS.register(Tooltip, Legend);
+
     const { salesData, inventoryData } = useInventory();
 
     const salesChartData = {
