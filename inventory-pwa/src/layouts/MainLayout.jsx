@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import Header from '../components/common/Header';
 import useTheme from '../hooks/useTheme';
 import { Outlet } from 'react-router';
@@ -10,7 +10,7 @@ const MainLayout = () => {
         <div className={`min-h-screen bg-${theme}-background text-${theme}-text`}>
             <Header />
             <main className="p-4">
-                <Outlet />
+                {Children.only(<Outlet />)}
             </main>
         </div>
     );
