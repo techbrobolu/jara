@@ -3,6 +3,8 @@
 @layer base {
   :root {
     --color-primary: #0ea5e9;
+    --color-primary-600: #0e99da;
+    --color-primary-700: #0e87be;
     --color-secondary: #6366f1;
     --color-success: #22c55e;
     --color-warning: #f59e0b;
