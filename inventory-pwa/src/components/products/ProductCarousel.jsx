@@ -1,5 +1,4 @@
 import React from 'react';
-import { useInventory } from '../../hooks/useInventory';
 
 const ProductCarousel = ({ products }) => {
     return (
@@ -17,9 +16,15 @@ const ProductCarousel = ({ products }) => {
                                 className="w-full h-40 object-cover rounded-md mb-3"
                             />
                             <h3 className="font-medium mb-2">{product.name}</h3>
-                            <div className="text-warning font-semibold">
-                                Only {product.quantity} left
-                            </div>
+                            {product.quantity > 5 ? (
+                                <div className="text-green-600 font-semibold">
+                                    In Stock: {product.quantity}
+                                </div>
+                            ) : (
+                                <div className="text-warning font-semibold">
+                                    Only {product.quantity} left
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}

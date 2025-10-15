@@ -1,7 +1,7 @@
 // Sure, here's the contents for the file: /inventory-pwa/inventory-pwa/src/hooks/useAuth.js
 
 import { useState, useEffect, useContext } from 'react';
-import { supabase } from '../services/supabase';
+import supabase from '../services/supabase';
 import { AuthContext } from '../context/AuthContext';
 
 export const useAuth = () => {

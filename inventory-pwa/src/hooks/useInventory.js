@@ -2,7 +2,7 @@ import { useContext, useEffect, useState, useCallback } from 'react';
 import { InventoryContext } from '../context/InventoryContext';
 import { 
     fetchProducts, 
-    syncInventory,
+    initializeSyncService,
     addProduct as dbAddProduct,
     updateProduct as dbUpdateProduct,
     deleteProduct as dbDeleteProduct,
@@ -35,7 +35,7 @@ const useInventory = () => {
     const syncData = useCallback(async () => {
         try {
             setLoading(true);
-            await syncInventory();
+            await initializeSyncService();
             const products = await fetchProducts();
             setInventory(products);
         } catch (err) {

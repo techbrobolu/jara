@@ -1,7 +1,7 @@
 // Sure, here's the contents for the file /inventory-pwa/inventory-pwa/src/components/common/ThemeToggle.jsx:
 
 import React from 'react';
-import { useTheme } from '../../hooks/useTheme';
+import useTheme from '../../hooks/useTheme';
 
 const ThemeToggle = () => {
     const { theme, toggleTheme } = useTheme();

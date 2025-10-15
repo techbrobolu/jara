@@ -1,5 +1,3 @@
-// Sure, here's the contents for the file /inventory-pwa/inventory-pwa/src/pages/ProductEdit.jsx:
-
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { InventoryContext } from '../context/InventoryContext';

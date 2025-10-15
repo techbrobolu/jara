@@ -1,5 +1,5 @@
 import React from 'react';
-import { useInventory } from '../../hooks/useInventory';
+import useInventory from '../../hooks/useInventory';
 import { formatCurrency } from '../../utils/helpers';
 
 const ProductModal = ({ 

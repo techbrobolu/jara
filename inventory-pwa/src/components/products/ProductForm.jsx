@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { useInventory } from '../../hooks/useInventory';
+import useInventory from '../../hooks/useInventory';
 
 const ProductForm = ({ product, onSubmit }) => {
     const [name, setName] = useState(product ? product.name : '');

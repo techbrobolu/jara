@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import { useInventory } from '../../hooks/useInventory';
+import useInventory from '../../hooks/useInventory';
 
 const ProductGrid = () => {
     const { products } = useInventory();
