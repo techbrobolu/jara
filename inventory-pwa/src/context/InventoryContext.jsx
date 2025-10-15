@@ -1,10 +1,10 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { Children, createContext, useState, useContext, useEffect } from 'react';
 import db from '../db/dexieDB';
 import { syncData } from '../db/syncService';
 
 const InventoryContext = createContext();
 
-export const InventoryProvider = ({ children }) => {
+export const InventoryProvider = ({ Children }) => {
     const [inventory, setInventory] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -83,7 +83,7 @@ export const InventoryProvider = ({ children }) => {
 
     return (
         <InventoryContext.Provider value={value}>
-            {children}
+            {Children}
         </InventoryContext.Provider>
     );
 };
