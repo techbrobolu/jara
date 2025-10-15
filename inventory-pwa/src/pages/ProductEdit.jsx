@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { InventoryContext } from '../context/InventoryContext';
 import ProductForm from '../components/products/ProductForm';
-import { toast } from 'react-hot-toast';
+import { toast } from 'sonner';
 
 const ProductEdit = () => {
     const { id } = useParams();
